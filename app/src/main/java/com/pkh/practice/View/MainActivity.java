@@ -6,6 +6,7 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.pkh.practice.Model.User;
 import com.pkh.practice.Presenter.MainPresenter;
 import com.pkh.practice.Presenter.MainPresenterImpl;
 import com.pkh.practice.R;
@@ -36,6 +37,9 @@ public class MainActivity extends AppCompatActivity implements MainView, View.On
     private TextView click;
     private TextView other;
 
+    private TextView userName;
+    private TextView userAge;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -44,6 +48,9 @@ public class MainActivity extends AppCompatActivity implements MainView, View.On
         presenter = new MainPresenterImpl(this);
         click = (TextView) findViewById(R.id.textConfirm);
         other = (TextView) findViewById(R.id.other);
+        userName = (TextView)findViewById(R.id.userName);
+        userAge = (TextView)findViewById(R.id.userAge);
+
 
         click.setOnClickListener(this);
         other.setOnClickListener(this);
@@ -55,7 +62,20 @@ public class MainActivity extends AppCompatActivity implements MainView, View.On
     }
 
     @Override
+    public void changeText(User user) {
+        userName.setText(user.name);
+        userAge.setText(String.valueOf(user.age));
+    }
+
+    @Override
+    public void resetText() {
+        userName.setText("name");
+        userAge.setText("age");
+    }
+
+    @Override
     public void onClick(View view) {
-        presenter.OnClickSampleBtn(view.getId());
+        User user = new User("park",25);
+        presenter.OnClickSampleBtn(view.getId(),user);
     }
 }

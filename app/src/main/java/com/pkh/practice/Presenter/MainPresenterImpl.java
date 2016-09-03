@@ -1,5 +1,6 @@
 package com.pkh.practice.Presenter;
 
+import com.pkh.practice.Model.User;
 import com.pkh.practice.R;
 import com.pkh.practice.View.MainView;
 
@@ -19,13 +20,15 @@ public class MainPresenterImpl implements MainPresenter{
     }
 
     @Override
-    public void OnClickSampleBtn(int id) {
+    public void OnClickSampleBtn(int id, User user) {
         switch (id){
             case R.id.textConfirm:
-                mainView.showMessage("textConfirm click");
+                mainView.showMessage("change");
+                mainView.changeText(user);
                 break;
             default:
-                mainView.showMessage("default");
+                mainView.showMessage("reset");
+                mainView.resetText();
                 break;
         }
     }
