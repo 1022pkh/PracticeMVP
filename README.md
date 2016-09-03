@@ -11,3 +11,4 @@ MVP에서 presenter는 "중간자" 역활을 하고 있습니다. MVP에서는 �
 
 참고사이트
 1. https://medium.com/@LIP/mvp-pattern-in-android-e42246f9778b#.eez7ff83d
+2. http://thdev.tech/androiddev/2016/06/14/Android-TODO-MVP-Example.html
