@@ -9,7 +9,10 @@ Model-view-controller로 소프트웨어 아키텍쳐 패턴으로 컴퓨터에�
 Model–view–presenter는 MVC에서 파생된 아키텍쳐 패턴입니다. 그리고 주로 사용자 인터페이스를 구축하는데 사용됩니다.
 MVP에서 presenter는 "중간자" 역활을 하고 있습니다. MVP에서는 모든 프리젠테이션 로직을 presenter로 푸시합니다.
 
-참고사이트
+#느낌점
+확실히 MVP를 사용하여 코드 작업을 해보니, 기존의 보다 코드가 깔끔해지고 보기가 편해졌다. 유지보수할 때에도 좋을 것같으며, 프로젝트를 관리할 때에도 확실히 좋을 것 같다.
+
+#참고사이트
 
 1. https://medium.com/@LIP/mvp-pattern-in-android-e42246f9778b#.eez7ff83d 
 
